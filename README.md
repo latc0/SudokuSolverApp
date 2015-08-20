@@ -1,0 +1,1 @@
+C# Windows form app containing the logic from my (SimpleSudokuSolver) [github.com/latc0/SimpleSudokuSolver]
