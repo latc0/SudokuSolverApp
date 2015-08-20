@@ -33,10 +33,10 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(269, 276);
+            this.ClientSize = new System.Drawing.Size(274, 304);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sudoku Solver";
             this.ResumeLayout(false);
 
         }

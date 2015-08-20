@@ -17,12 +17,11 @@ namespace SudokuSolver
         {
             InitializeComponent();
             addComponents();
-            
+
         }
 
         private void addComponents()
         {
-            //gap = 6
             int gap = 26;
             int x = 12, y = 12;
             Size s = new Size(20, 20);
@@ -35,8 +34,10 @@ namespace SudokuSolver
                 if (i % 9 == 0)
                 {
                     x = 12;
-                    y += gap;
+                    if (i % 27 == 0) y = y + gap + 10;
+                    else y += gap;
                 }
+                else if (i % 3 == 0) x = x + gap + 10;
                 else x += gap;
             }
 
@@ -52,7 +53,7 @@ namespace SudokuSolver
         {
             int[] grid = new int[81];
             int i = 0;
-            foreach(Control tb in this.Controls)
+            foreach (Control tb in this.Controls)
             {
                 if (tb.GetType() == typeof(TextBox))
                 {
@@ -152,11 +153,7 @@ namespace SudokuSolver
             {
                 for (int c = startCell; c <= startCell + 2; c++)
                 {
-                    //int look = startCell + c;
-                    if (game[c] == trialValue)
-                    {
-                        return false;
-                    }
+                    if (game[c] == trialValue) return false;
                 }
                 startCell += 9;//go to next row
             }
